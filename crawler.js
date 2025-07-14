@@ -261,9 +261,12 @@ async function main() {
   try {
     // --------------------------------------   2012 KH--------------------------------------
 
-    const DC_LIST = await playerSearch([802], 0); // playerSearch(시즌넘버, 최소오버롤)
-    let DC_RESULTS = await playerPriceValue(DC_LIST, [1, 2, 3, 4, 5, 6, 7, 8]); // playerPriceValue(데이터 , 강화등급)
-    await saveToDB(DC_RESULTS);
+    const EBS_LIST = await playerSearch([251], 0); // playerSearch(시즌넘버, 최소오버롤)
+    let EBS_RESULTS = await playerPriceValue(
+      EBS_LIST,
+      [1, 2, 3, 4, 5, 6, 7, 8]
+    ); // playerPriceValue(데이터 , 강화등급)
+    await saveToDB(EBS_RESULTS);
 
     // -------------------------------------------------------------------------------------------------------------------------------
 
